@@ -1,0 +1,301 @@
+@import "../bower_components/normalize.css/normalize.css";
+@import "../bower_components/sass-flex-mixin/_flex";
+@import "../fonts/font.css";
+@import 'https://fonts.googleapis.com/css?family=Copse|Rubik+One';
+
+$color-1: #0067c6;
+$color-2: #85b0c6;
+$color-3: #EA4F8B;
+$color-4: #92499e;
+
+$color-cv-1:#efc322;
+$color-cv-2:#d3305b;
+$color-cv-3:#84ccbf;
+$color-cv-4:#932b77;
+$color-cv-5:#607d8b;
+$color-cv-6:#a92e6f;
+$color-cv-7:#0e1555;
+
+@mixin font-mix($value: inherit, $font-z: inherit) {
+	@if $value == museo900 {
+		font-family: 'museo900',sans-serif;
+		font-weight: bolder;
+		font-size: $font-z;
+	} @else if $value == museo300 {
+		font-family: 'museo300', sans-serif;
+		font-weight: lighter;
+		font-size: $font-z;
+	} @else if $value == copse {
+		font-family: 'Copse',serif ;
+		font-size: $font-z;
+	} @else if $value == rubikOne {
+		font-family: 'Rubik One', sans-serif;
+		font-size: $font-z;
+	}
+	font-family:$value;
+	font-weight: inherit;
+	font-size: $font-z;
+}
+body{
+	overflow-x: hidden;
+}
+*{
+	-webkit-font-smoothing:antialiased;
+}
+img{
+	width: 100%;
+	border: 0;
+}
+.section-1{
+	@include flexbox;
+	@include justify-content(center);
+	@include flex-direction(column);
+	@include align-self(center);
+	min-height: 100vh;
+	overflow: hidden !important;
+	background: $color-3 url(../img/stardust_@2X.png) center center ;
+	-webkit-animation: bg 50.5s linear infinite normal none;
+	-o-animation: bg 50.5s linear infinite normal none;
+	animation: bg 50.5s linear infinite normal none;
+
+
+	&:before,&:after{
+		content:'';
+		position: absolute;
+		bottom: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 200px 0 0 320px;
+		border-color: transparent transparent transparent $color-4;
+		line-height: 0px;
+		_border-color: #000000 #000000 #000000 $color-4;
+		_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+	}
+	&:before{
+		left: 0;
+	}
+	&:after{
+		top: 0;
+		right: 0 !important;
+		-webkit-transform: rotate(180deg);
+		        transform: rotate(180deg)
+	}
+
+	.box-t1{
+		@include flexbox;
+		z-index: 10;
+		@include align-items(center);
+		@include justify-content(center);
+		// margin: 20px 0 20px 0;
+		span{
+			text-transform: uppercase;
+			color:#fff;
+			font-weight: bolder;
+			letter-spacing: 10px;
+			@include font-mix(arial,18px);
+			-webkit-transform: rotate(-10deg);
+			        transform: rotate(-10deg);
+			text-shadow: 0 2px 0 #e53f79;
+			text-align: center
+		}
+		img{
+			margin:0 15px 25px 15px;
+			-webkit-animation: balon 8.5s linear infinite normal none;
+			-o-animation: balon 8.5s linear infinite normal none;
+			animation: balon 8.5s linear infinite normal none;
+		}
+		img+span{
+
+			// margin-left: 10px;
+			-webkit-transform: rotate(10deg);
+			        transform: rotate(10deg)
+		}
+
+	}
+	.box-t2{
+		@include flexbox;
+		@include align-items(center);
+		@include justify-content(center);
+		color: #fff;
+		position: relative;
+		text-align: center;
+		h1{
+			letter-spacing: 10px;
+			text-transform: uppercase;
+			@include font-mix(museo900, 12vw);
+			z-index: 10;
+			text-shadow: 0 5px 0 #e53f79;
+		}
+	}
+	.box-3{
+		border-top: 1px solid #fff ;
+		border-bottom: 1px solid #fff ;
+		color:#fff;
+		@include flexbox;
+		@include justify-content(space-between);
+		@include align-items(center);
+		@include flex-direction(horizontal);
+		margin-bottom: 25px;
+		h2{
+
+			text-shadow: 0 2px 0 #e53f79;
+
+			margin: 25px 0;
+			padding: 0 25px;
+			text-transform: uppercase;
+			@include font-mix(museo300,22px);
+			font-weight: bold;
+			letter-spacing: 6px;
+			line-height: 1.5;
+			text-align: center;
+			border-left: 1px solid #fff;
+			border-right: 1px solid #fff;
+
+		}
+		p{
+			text-shadow:  -3px 0 0 #e53f79;
+			padding: 0 5px ;
+			text-align: center;
+			@include font-mix(arial, 14px);
+			letter-spacing: 4px;
+			font-weight: bold;
+			text-transform: uppercase;
+			position: relative;
+			transform:rotate(-90deg)
+		}
+	}
+}
+.bg-element{
+	background-color:$color-4;
+}
+.section-cv{
+	@include flexbox;
+	@include justify-content(flex-end);
+	@include align-items(center);
+	height: 100vh;
+	.box-container{
+
+		article{
+			top: 25vh;
+			left: 5vw;
+			margin-top: 25px;
+			z-index: 10;
+			position: absolute;
+			color: $color-cv-2;
+			h1{
+				@include font-mix(copse,50px);
+				text-transform: uppercase;
+			}
+			h2{
+				@include font-mix('Rubik One', 50px);
+				text-transform: uppercase;
+			}
+		}
+	}
+	.bg-text{
+		position: relative;
+		top: 15px;
+		right: -5px;
+		text-align: right;
+		h1{
+			@include font-mix(museo900,15vh);
+			line-height: 0.8;
+			text-transform: uppercase;
+			&:nth-child(1){
+				color:$color-cv-2;
+				text-shadow: 0 0 10px  $color-cv-2;
+
+			}
+			&:nth-child(2){
+				text-shadow: 0 0 10px #ac2b5b;
+				// color: rgba($color-cv-2, .8);
+				color:#ac2b5b;
+			}
+			&:nth-child(3){
+				text-shadow: 0 0 10px #842559;
+				// color: rgba($color-cv-2, .6);
+				color:#842559;
+			}
+			&:nth-child(4){
+				text-shadow: 0 0 10px #5c1f57;
+				// color: rgba($color-cv-2, .4);
+				color:#5c1f57;
+			}
+			&:nth-child(5){
+				text-shadow: 0 0 10px #351a56;
+				// color: rgba($color-cv-2, .2);
+				color:#351a56;
+			}
+		}
+	}
+}
+.bg-cv{
+	background: $color-cv-7 url(../img/bg2.png) top left repeat;
+	// background-color: $color-cv-7;
+	-webkit-animation: bg 50.5s linear infinite normal none;
+	-o-animation: bg 50.5s linear infinite normal none;
+	animation: bg 50.5s linear infinite normal none;
+}
+.bx-container{
+
+}
+#canvas{
+	position: absolute;
+	top: -25%;
+	left: -450px;
+	width: 800px;
+	height: 150vh;
+	float: left;
+	// background-color: rgba($color-cv-1,.98);
+	background-color:$color-cv-1;
+	box-shadow: 0 0 10px 2px $color-cv-1;
+	transform: rotate(20deg);
+}
+
+
+
+@-webkit-keyframes balon {
+  from   { transform:rotate( 0deg) ;}
+  to {  transform:rotate(360deg);}
+}
+@-moz-keyframes balon {
+  from   { transform:rotate(0deg) ;}
+  to {  transform:rotate(360deg);}
+}
+@-o-keyframes balon {
+  from   { transform:rotate(0deg) ;}
+  to {  transform:rotate(360deg);}
+}
+@keyframes balon {
+  from   { transform:rotate(0deg) ;}
+  to {  transform:rotate(360deg);}
+}
+
+@-webkit-keyframes bg {
+  from   { background-position:0 ;}
+  to {  background-position:500px;}
+}
+@-moz-keyframes bg {
+  from   { background-position:0 ;}
+  to {  background-position:500px;}
+}
+@-o-keyframes bg {
+  from   { background-position:0 ;}
+  to {  background-position:500px;}
+}
+@keyframes bg {
+  from   { background-position:0 ;}
+  to {  background-position:500px;}
+}
+
+
+
+
+
+
+
+
+
+
+/**/
