@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>J\N\C</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body class=" bg-cv">
+      <header>
+        <div class="container-logo">
+          <div class="logo"></div>
+          <div class="txt-logo"></div>
+        </div>
+        <nav class="menu">
+          <a href="javascript:;" class="btn-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </nav>
+
+      </header>
+       <section class="container-fluid">
+            <div class="row">
+                <section class="col-sm-12 section-cv">
+                    <section class="box-container">
+                      <article class="">
+                        <h1>Lorem</h1>
+                        <h2>ipsum dolor.</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                      </article>
+                    </section>
+                    <article class="bg-text">
+                       <!-- <h1>Curriculum<br>Vitae<br>Front<br>-end</h1> -->
+                       <h1>TEXTO</h1>
+                       <h1>TEXTO</h1>
+                       <h1>TEXTO</h1>
+                       <h1>TEXTO</h1>
+                       <h1>TEXTO</h1>
+                       <!-- <h1>Curri</h1>
+                       <h1>culum</h1>
+                       <h1>Vitae</h1>
+                       <h1>Front</h1>
+                       <h1>-end</h1> -->
+                    </article>
+                    <canvas id="canvas" width="100%" ></canvas>
+                </section>
+                <section class="clearfix"></section>
+            </div>
+       </section>
+        <script src="js/jquery-2.2.3.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script>
+            var canvas = document.getElementById('canvas');
+            var context = canvas.getContext('2d');
+            context.rect(0, 0, canvas.width, canvas.height);
+            // add linear gradient
+            // var grd = context.createLinearGradient(0, 0, canvas.width, canvas.height);
+            // light blue
+            // grd.addColorStop(0, '#8ED6FF');
+            // dark blue
+            // grd.addColorStop(1, '#004CB3');
+            // context.fillStyle = grd;
+            // context.fill();
+            context.fillStyle = 'yellow';
+            context.rotate(Math.PI / 45);
+        </script>
+    </body>
+</html>
