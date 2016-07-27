@@ -238,22 +238,22 @@ img {
         text-shadow: 0 0 10px #d3305b; }
       .section-cv .bg-text h1:nth-child(2) {
         text-shadow: 0 0 10px #ac2b5b;
-        color: #ac2b5b; }
+        color: rgba(211, 48, 91, 0.8); }
       .section-cv .bg-text h1:nth-child(3) {
         text-shadow: 0 0 10px #842559;
-        color: #842559; }
+        color: rgba(211, 48, 91, 0.6); }
       .section-cv .bg-text h1:nth-child(4) {
         text-shadow: 0 0 10px #5c1f57;
-        color: #5c1f57; }
+        color: rgba(211, 48, 91, 0.4); }
       .section-cv .bg-text h1:nth-child(5) {
         text-shadow: 0 0 10px #351a56;
-        color: #351a56; }
+        color: rgba(211, 48, 91, 0.2); }
 
 .bg-cv {
   background: #0e1555 url(../img/bg2.png) top left repeat;
-  -webkit-animation: bg 50.5s linear infinite normal none;
-  -o-animation: bg 50.5s linear infinite normal none;
-  animation: bg 50.5s linear infinite normal none; }
+  -webkit-animation: bg 200.9s linear infinite normal none;
+  -o-animation: bg 200.9s linear infinite normal none;
+  animation: bg 200.9s linear infinite normal none; }
 
 #canvas {
   position: absolute;
@@ -290,20 +290,20 @@ img {
   from {
     background-position: 0; }
   to {
-    background-position: 500px; } }
+    background-position: 11100px; } }
 @-moz-keyframes bg {
   from {
     background-position: 0; }
   to {
-    background-position: 500px; } }
+    background-position: 11100px; } }
 @-o-keyframes bg {
   from {
     background-position: 0; }
   to {
-    background-position: 500px; } }
+    background-position: 11100px; } }
 @keyframes bg {
   from {
     background-position: 0; }
   to {
-    background-position: 500px; } }
+    background-position: 11100px; } }
 /**/
